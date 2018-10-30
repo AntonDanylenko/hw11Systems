@@ -8,5 +8,5 @@ int main(){
   stat("README.md", &buffer);
   printf("File size: %ld\n", buffer.st_size);
   printf("mode: %d\n", buffer.st_mode);
-  printf("Tiem of Last access: %s\n", ctime(buffer.st_atime));
+  printf("Tiem of Last access: %s\n", ctime(&buffer.st_atime));
 }
