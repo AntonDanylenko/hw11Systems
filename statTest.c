@@ -69,26 +69,26 @@ int main(){
 
   i = 1;
   ii = 100000000;
-  char *s = "";
+  char *permString = "";
   while (binaryPerm){
     if (binaryPerm % ii){
       if (i%3 == 1){
-        s += "r";
+        permString += "r";
       }
       else if (i%3 == 2){
-        s += "w";
+        permString += "w";
       }
       else{
-        s += "x";
+        permString += "x";
       }
     }
     else {
-      s += "-";
+      permString += "-";
     }
     i++;
     ii /= 10;
   }
-  printf("Permissions: %s\n", s);
+  printf("Permissions: %s\n", permString);
   /*char *permstr = "-";
   if (S_IRUSR(permissions)){
     strcat(permstr, "r");
