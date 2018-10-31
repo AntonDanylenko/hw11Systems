@@ -33,7 +33,7 @@ int main(){
   printf("File size (readable): %s\n", b);
 
   int permissions = buffer.st_mode;
-  int octalPerm = 0
+  int octalPerm = 0;
   int i = 1;
 
   while (decimalNumber != 0)
