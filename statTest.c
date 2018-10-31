@@ -73,17 +73,17 @@ int main(){
   while (binaryPerm){
     if (binaryPerm % ii){
       if (i%3 == 1){
-        permString += "r";
+        strcat(permString,"r");
       }
       else if (i%3 == 2){
-        permString += "w";
+        strcat(permString,"w");
       }
       else{
-        permString += "x";
+        strcat(permString,"x");
       }
     }
     else {
-      permString += "-";
+      strcat(permString,"-");
     }
     i++;
     ii /= 10;
