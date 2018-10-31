@@ -48,8 +48,8 @@ int main(){
 
   int binaryPerm = 0;
   i = 1;
-  ii = 100;
-  tempOctal = 0;
+  int ii = 100;
+  int tempOctal = 0;
   while (octalPerm){
     tempOctal = octalPerm / ii;
     while (tempOctal){
