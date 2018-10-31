@@ -33,7 +33,19 @@ int main(){
   printf("File size (readable): %s\n", b);
 
   int permissions = buffer.st_mode;
-  char *permstr = "-";
+  int octalPerm = 0
+  int i = 1;
+
+  while (decimalNumber != 0)
+  {
+    octalPerm += (permissions % 8) * i;
+    permissions /= 8;
+    i *= 10;
+  }
+
+  octalPerm = octalPerm/1000;
+  printf("OctalPerm: %d\n", octalPerm);
+  /*char *permstr = "-";
   if (S_IRUSR(permissions)){
     strcat(permstr, "r");
   }
@@ -69,6 +81,6 @@ int main(){
   if(S_IXOTH(permissions)){
     strcat(permstr, "x");
   }
-  else{strcat(permstr, "-");}
-  printf("Permissions: %s", permstr);
+  else{strcat(permstr, "-");}*/
+  //printf("Permissions: %s", permstr);
 }
