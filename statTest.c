@@ -30,6 +30,6 @@ int main(){
   sprintf(b, s, size);
   printf("File size (readable): %s\n", b);
 
-  int permissions = &buffer.mode_t;
+  int permissions = &buffer.st_mode;
   printf("Permissions: %d\n", permissions);
 }
