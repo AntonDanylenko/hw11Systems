@@ -58,7 +58,9 @@ int main(){
       i *= 10;
       printf("tempOctal: %d, binaryPerm: %d, i: %d, ii: %d\n", tempOctal, binaryPerm, i, ii);
     }
-    binaryPerm *= 1000;
+    if (ii/10){
+      binaryPerm *= 1000;
+    }
     ii /= 10;
     i = 1;
     printf("binaryPerm: %d\n", binaryPerm);
