@@ -61,6 +61,7 @@ int main(){
     binaryPerm *= 100;
     ii /= 10;
     i = 1;
+    printf("binaryPerm: %d\n", binaryPerm);
   }
   binaryPerm %= 100;
   printf("BinaryPerm: %d\n", binaryPerm);
