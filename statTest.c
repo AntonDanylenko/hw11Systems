@@ -48,12 +48,20 @@ int main(){
 
   int binaryPerm = 0;
   i = 1;
+  ii = 100;
+  tempOctal = 0;
   while (octalPerm){
-    binaryPerm += (octalPerm % 2) * i;
-    octalPerm /= 2;
-    i *= 10;
+    tempOctal = octalPerm / ii;
+    while (tempOctal){
+      binaryPerm += (tempOctal % 2) * i;
+      tempOctal /= 2;
+      i *= 10;
+    }
+    binaryPerm *= 100;
+    ii /= 10;
+    i = 1;
   }
-
+  binaryPerm /= 100;
   printf("BinaryPerm: %d\n", binaryPerm);
   /*char *permstr = "-";
   if (S_IRUSR(permissions)){
