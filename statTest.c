@@ -51,7 +51,7 @@ int main(){
   int ii = 100;
   int tempOctal = 0;
   while (ii){
-    tempOctal = octalPerm / ii;
+    tempOctal = (octalPerm%(ii*10))/ ii;
     while (tempOctal){
       binaryPerm += (tempOctal % 2) * i;
       tempOctal /= 2;
