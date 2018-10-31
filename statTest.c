@@ -73,7 +73,7 @@ int main(){
   strcpy(permString, "");
   while (binaryPerm){
     printf("Permissions: %s\n", permString);
-    if (binaryPerm % ii){
+    if (binaryPerm / ii){
       if (i%3 == 1){
         strcat(permString,"r");
       }
@@ -88,8 +88,8 @@ int main(){
       strcat(permString,"-");
     }
     i++;
+    binaryPerm %= ii;
     ii /= 10;
-    binaryPerm %= 10;
   }
   printf("Permissions: %s\n", permString);
   /*char *permstr = "-";
