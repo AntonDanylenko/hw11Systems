@@ -71,7 +71,7 @@ int main(){
   ii = 100000000;
   char permString[20];
   strcpy(permString, "");
-  while (binaryPerm){
+  while (i<10){
     //printf("Permissions: %s\n", permString);
     if (binaryPerm / ii){
       if (i%3 == 1){
