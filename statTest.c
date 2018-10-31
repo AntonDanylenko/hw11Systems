@@ -36,7 +36,7 @@ int main(){
   int octalPerm = 0;
   int i = 1;
 
-  while (decimalNumber != 0)
+  while (permissions != 0)
   {
     octalPerm += (permissions % 8) * i;
     permissions /= 8;
