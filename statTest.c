@@ -37,29 +37,38 @@ int main(){
   if (S_IRUSR(permissions)){
     strcat(permstr, "r");
   }
+  else{strcat(permstr, "-");}
   if(S_IWUSR(permissions)){
     strcat(permstr, "w");
   }
+  else{strcat(permstr, "-");}
   if(S_IXUSR(permissions)){
     strcat(permstr, "x");
   }
+  else{strcat(permstr, "-");}
   if (S_IRGRP(permissions)){
     strcat(permstr, "r");
   }
+  else{strcat(permstr, "-");}
   if(S_IWGRP(permissions)){
     strcat(permstr, "w");
   }
+  else{strcat(permstr, "-");}
   if(S_IXGRP(permissions)){
     strcat(permstr, "x");
   }
+  else{strcat(permstr, "-");}
   if (S_IROTH(permissions)){
     strcat(permstr, "r");
   }
+  else{strcat(permstr, "-");}
   if(S_IWOTH(permissions)){
     strcat(permstr, "w");
   }
+  else{strcat(permstr, "-");}
   if(S_IXOTH(permissions)){
     strcat(permstr, "x");
   }
+  else{strcat(permstr, "-");}
   printf("Permissions: %s", permstr);
 }
