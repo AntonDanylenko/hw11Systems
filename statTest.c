@@ -85,8 +85,10 @@ int main(){
     else {
       strcat(permString,"-");
     }
+    printf("Permissions: %s\n", permString);
     i++;
     ii /= 10;
+    binaryPerm %= 10;
   }
   printf("Permissions: %s\n", permString);
   /*char *permstr = "-";
