@@ -69,7 +69,7 @@ int main(){
 
   i = 1;
   ii = 100000000;
-  char *permString = "";
+  char permString[20];
   while (binaryPerm){
     printf("Permissions: %s\n", permString);
     if (binaryPerm % ii){
