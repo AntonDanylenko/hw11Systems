@@ -43,7 +43,7 @@ int main(){
     i *= 10;
   }
 
-  octalPerm = octalPerm/1000;
+  octalPerm = octalPerm%1000;
   printf("OctalPerm: %d\n", octalPerm);
   /*char *permstr = "-";
   if (S_IRUSR(permissions)){
