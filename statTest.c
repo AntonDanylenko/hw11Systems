@@ -30,7 +30,7 @@ int main(){
   }
 
   sprintf(b, s, size);
-  printf("File size (readable): %s\n", b);
+  printf("File size (readable): %s\n\n", b);
 
   int permissions = buffer.st_mode;
   int octalPerm = 0;
@@ -44,7 +44,7 @@ int main(){
   }
 
   octalPerm = octalPerm%1000;
-  printf("OctalPerm: %d\n", octalPerm);
+  //printf("OctalPerm: %d\n", octalPerm);
 
   int binaryPerm = 0;
   i = 1;
@@ -65,14 +65,14 @@ int main(){
     i = 1;
     //printf("binaryPerm: %d\n", binaryPerm);
   }
-  printf("BinaryPerm: %d\n", binaryPerm);
+  //printf("BinaryPerm: %d\n", binaryPerm);
 
   i = 1;
   ii = 100000000;
   char permString[20];
   strcpy(permString, "");
   while (binaryPerm){
-    printf("Permissions: %s\n", permString);
+    //printf("Permissions: %s\n", permString);
     if (binaryPerm / ii){
       if (i%3 == 1){
         strcat(permString,"r");
