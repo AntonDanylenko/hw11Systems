@@ -62,7 +62,7 @@ int main(){
     ii /= 10;
     i = 1;
   }
-  binaryPerm /= 100;
+  binaryPerm %= 100;
   printf("BinaryPerm: %d\n", binaryPerm);
   /*char *permstr = "-";
   if (S_IRUSR(permissions)){
