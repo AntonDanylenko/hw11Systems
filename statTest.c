@@ -38,19 +38,23 @@ int main(){
 
   while (permissions)
   {
-    octalPerm += (permissions % 2) * i;
-    permissions /= 2;
+    octalPerm += (permissions % 8) * i;
+    permissions /= 8;
     i *= 10;
   }
 
-  octalPerm = octalPerm%1000000000;
+  octalPerm = octalPerm%1000;
   printf("OctalPerm: %d\n", octalPerm);
 
-  /*int binaryPerm = 0;
+  int binaryPerm = 0;
   i = 1;
   while (octalPerm){
-    binaryPerm += (octalPerm % 2)
-  }*/
+    binaryPerm += (octalPerm % 2) * i;
+    octalPerm /= 2;
+    i *= 10;
+  }
+
+  printf("BinaryPerm: %d\n", binaryPerm);
   /*char *permstr = "-";
   if (S_IRUSR(permissions)){
     strcat(permstr, "r");
