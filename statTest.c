@@ -25,11 +25,39 @@ int main(){
   if(size/1000 > 0){
     size /= 1000;
     s = "%ld GB";
-    }
+  }
 
   sprintf(b, s, size);
   printf("File size (readable): %s\n", b);
 
   int permissions = buffer.st_mode;
-  printf("Permissions: %d\n", permissions);
+  char *permstr = "-";
+  if (S_IRUSR(permissions)){
+    strcat(permstr, "r");
+  }
+  if(S_IWUSR(permissions)){
+    strcat(permstr, "w");
+  }
+  if(S_IXUSR(permissions)){
+    strcat(permstr, "x");
+  }
+  if (S_IRGRP(permissions)){
+    strcat(permstr, "r");
+  }
+  if(S_IWGRP(permissions)){
+    strcat(permstr, "w");
+  }
+  if(S_IXGRP(permissions)){
+    strcat(permstr, "x");
+  }
+  if (S_IROTH(permissions)){
+    strcat(permstr, "r");
+  }
+  if(S_IWOTH(permissions)){
+    strcat(permstr, "w");
+  }
+  if(S_IXOTH(permissions)){
+    strcat(permstr, "x");
+  }
+  printf("Permissions: %s", permstr);
 }
