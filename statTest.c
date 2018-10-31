@@ -56,17 +56,39 @@ int main(){
       binaryPerm += (tempOctal % 2) * i;
       tempOctal /= 2;
       i *= 10;
-      printf("tempOctal: %d, binaryPerm: %d, i: %d, ii: %d\n", tempOctal, binaryPerm, i, ii);
+      //printf("tempOctal: %d, binaryPerm: %d, i: %d, ii: %d\n", tempOctal, binaryPerm, i, ii);
     }
     if (ii/10){
       binaryPerm *= 1000;
     }
     ii /= 10;
     i = 1;
-    printf("binaryPerm: %d\n", binaryPerm);
+    //printf("binaryPerm: %d\n", binaryPerm);
   }
-  binaryPerm %= 100;
   printf("BinaryPerm: %d\n", binaryPerm);
+
+  i = 1;
+  ii = 100000000;
+  char *s = "";
+  while (binaryPerm){
+    if (binaryPerm % ii){
+      if (i%3 == 1){
+        s += "r";
+      }
+      else if (i%3 == 2){
+        s += "w";
+      }
+      else{
+        s += "x";
+      }
+    }
+    else {
+      s += "-";
+    }
+    i++;
+    ii /= 10;
+  }
+  printf("Permissions: %s\n", s);
   /*char *permstr = "-";
   if (S_IRUSR(permissions)){
     strcat(permstr, "r");
@@ -104,5 +126,4 @@ int main(){
     strcat(permstr, "x");
   }
   else{strcat(permstr, "-");}*/
-  //printf("Permissions: %s", permstr);
 }
