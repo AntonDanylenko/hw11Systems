@@ -71,6 +71,7 @@ int main(){
   ii = 100000000;
   char *permString = "";
   while (binaryPerm){
+    printf("Permissions: %s\n", permString);
     if (binaryPerm % ii){
       if (i%3 == 1){
         strcat(permString,"r");
@@ -85,7 +86,6 @@ int main(){
     else {
       strcat(permString,"-");
     }
-    printf("Permissions: %s\n", permString);
     i++;
     ii /= 10;
     binaryPerm %= 10;
