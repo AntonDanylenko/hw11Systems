@@ -53,6 +53,7 @@ int main(){
   while (ii){
     tempOctal = octalPerm / ii;
     while (tempOctal){
+      printf("tempOctal: %d, binaryPerm: %d, i: %d, ii: %d\n", tempOctal, binaryPerm, i, ii);
       binaryPerm += (tempOctal % 2) * i;
       tempOctal /= 2;
       i *= 10;
